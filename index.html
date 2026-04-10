@@ -1104,7 +1104,24 @@
   @media (max-width: 900px) {
     .about-collage { height: 280px; }
   }
+.photo-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  color: white;
+  font-size: 0.78rem;
+  padding: 1.2rem 0.8rem 0.7rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 0 0 var(--radius) var(--radius);
+}
 
+.about-photo-placeholder:hover .photo-caption {
+  opacity: 1;
+}
+  
 </style>
 </head>
 <body>
@@ -1192,14 +1209,18 @@
           <div class="about-photo-main">
             <div class="about-photo-placeholder">
               <img src="grouphoto.jpeg" alt="Team photo with former National Ambassadorr: Dr. Raúl Gutierrez">
+              <div class="photo-caption">ASM UTEC team with former National Ambassadorr: Dr. Raúl Gutierrez</div>
+              
             </div>
           </div>
           <div class="about-photo-side">
             <div class="about-photo-placeholder">
               <img src="asmstand.jpeg" alt="Team photo">
+              <div class="photo-caption">Our team at UTEC's Student Fair</div>
             </div>
             <div class="about-photo-placeholder">
               <img src="asmnexo2025.jpeg" alt="Team photo">
+              <div class="photo-caption">Final photo of NexoBio 2025: our first big event</div>
             </div>
           </div>
         </div>
